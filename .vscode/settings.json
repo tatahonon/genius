@@ -1,0 +1,10 @@
+{
+  "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+  "editor.formatOnSave": true,
+  "[html]": { "editor.defaultFormatter": "rvest.vs-code-prettier-eslint" },
+  "html.format.enable": false,
+"prettier.requireConfig": false,
+"[jsonc]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+}
+}
