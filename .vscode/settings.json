@@ -1,10 +1,19 @@
 {
-  "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
   "editor.formatOnSave": true,
-  "[html]": { "editor.defaultFormatter": "rvest.vs-code-prettier-eslint" },
-  "html.format.enable": false,
-"prettier.requireConfig": false,
-"[jsonc]": {
-    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
-}
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // make it explicit per language (avoids the built-in HTML/TS formatter winning)
+  "[html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[javascriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+
+  // if you also run ESLint, let it fix on save alongside Prettier
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+
+  // only needed if you *require* a config; you already have one
+  "prettier.requireConfig": true
 }
